@@ -1,4 +1,4 @@
-# BubbleSort
+# Bubble Sort
 
 Worst Complexity: n^2
 
@@ -12,7 +12,7 @@ Stable: Yes
 
 Method: Exchanging
 
-# QuickSort
+# Quick Sort
 Worst Complexity: n^2
 
 Average Complexity: nlogn 
@@ -31,7 +31,7 @@ Q: Why QuickSort is better than MergerSort?
 
 A: quicksort is in-place sorting method and does not require additional memory
 
-# CountingSort
+# Counting Sort
 Worst Complexity: n+k
 
 Average Complexity: n+k
@@ -42,7 +42,7 @@ Space Complexity: O(max) where max is the range of elements
 
 Stable: Yes
 
-# MergeSort
+# Merge Sort
 Worse Complexity: nlogn
 
 Average Complexity: nlogn
@@ -55,7 +55,7 @@ Stable: Yes
 
 Method: divide and conquers(merging)
 
-# HeapSort
+# Heap Sort
 Worse Complexity: nlogn
 
 Average Complexity: nlogn
@@ -66,7 +66,7 @@ Space Complexity: 1
 
 Stable: No
 
-# SelectionSort
+# Selection Sort
 Worse Complexity: n^2
 
 Average Complexity: n^2
@@ -91,3 +91,30 @@ Space Complexity: 1
 Stable: Yes
 
 Method: Insertion
+
+# Cocktail Sort
+
+Worst complexity: n^2
+
+Average complexity: n^2
+
+Best complexity: n
+
+Space complexity: 1
+
+Stable: Yes
+
+Method: Exchanging
+
+# Intro Sort
+Worst complexity: nlogn
+
+Average complexity: nlogn
+
+Best complexity: nlogn
+
+Space complexity: nlogn
+
+Stable: No
+
+Comparison based sort that consists of three sorting phases, which are quickSort, heapSort and insertionSort

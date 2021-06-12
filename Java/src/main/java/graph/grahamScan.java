@@ -1,7 +1,5 @@
 package graph;
 
-//public class graham_Scan {
-//}
 import java.io.*;
 import java.util.*;
 
@@ -14,7 +12,7 @@ class Point{
 }
 
 
-public class graham_Scan{
+public class grahamScan{
     public static void print(ArrayList<Point> list){
         for(Point p: list){
             System.out.println("("+ p.x + ", " + p.y+")");

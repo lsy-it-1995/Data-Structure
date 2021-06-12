@@ -1,14 +1,9 @@
 package sorts;
 
-public class coktailSort {
-    public co
-    public void swap(int[] arr, int i, int j){
-        int temp = arr[i];
-        arr[i] = arr[j];
-        arr[j] = temp;
+public class cocktailSort {
+    public cocktailSort(int[] arr){
+        sort(arr);
     }
-
-
     public void sort(int[] arr){
         int min_pivot = 0,
                 max_pivot = arr.length - 1;
@@ -38,4 +33,10 @@ public class coktailSort {
             min_pivot ++;
         }
     }
+    public void swap(int[] arr, int i, int j){
+        int temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+    }
+
 }

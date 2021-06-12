@@ -1,5 +1,4 @@
-package DynamicArray;
-
+package dynamicArray;
 import java.util.Iterator;
 
 @SuppressWarnings("unchecked")
@@ -111,6 +110,7 @@ public class dynamicArray<T> implements Iterator<T> {
         sb.append(arr[len-1] + "]");
         return sb.toString();
     }
+
     int index = 0;
     @Override
     public boolean hasNext() {

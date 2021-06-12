@@ -1,2 +1,4 @@
-package sorts;public class bucketSort {
+package sorts;
+
+public class bucketSort {
 }
