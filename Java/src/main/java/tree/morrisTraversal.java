@@ -1,27 +1,69 @@
 package tree;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class morrisTraversal{
-    public void inOrder(Node root){
+    class TreeNode{
+        int val;
+        TreeNode left, right;
+        TreeNode(){}
+        TreeNode(int val){
+            this.val = val;
+        }
+        TreeNode(int val, TreeNode left, TreeNode right){
+            this.val = val;
+            this.left = left;
+            this.right = right;
+        }
+    }
+    public void inOrderToPrint(Node root) {
         Node current = root;
-        while(current != null){
-            if(current.left == null){
-                System.out.print(current.data +" ");
+        while (current != null) {
+            if (current.left == null) {
+                System.out.print(current.data + " ");
                 current = current.right;
-            }else{
+            } else {
                 Node predecessor = current.left;
-                while(predecessor.right != current && predecessor.right != null){
+                while (predecessor.right != current && predecessor.right != null) {
                     predecessor = predecessor.right;
                 }
-                if(predecessor.right == null){
+                if (predecessor.right == null) {
                     predecessor.right = current;
                     current = current.left;
-                }else{
+                } else {
                     predecessor.right = null;
-                    System.out.print(current.data +" ");
+                    System.out.print(current.data + " ");
                     current = current.right;
                 }
             }
         }
+    }
+    private List<Integer> inOrderToList(TreeNode root){
+        List<Integer> list = new ArrayList();
+        TreeNode cur = root;
+        while(cur != null){
+            if(cur.left != null){
+                TreeNode pre = cur.left;
+                //keep going right on the left subtree
+                while(pre.right != null && pre.right != cur){
+                    pre = pre.right;
+                }
+                //connect the right most node on leftsubtree to the cur node
+                if(pre.right == null){
+                    pre.right = cur;
+                    cur = cur.left;
+                }else{
+                    pre.right = null;
+                    list.add(cur.val);
+                    cur = cur.right;
+                }
+            }else{
+                list.add(cur.val);
+                cur = cur.right;
+            }
+        }
+        return list;
     }
     public void preOrder(Node root){
         Node current = root;
@@ -56,7 +98,7 @@ public class morrisTraversal{
         root = bt.addNode(-20, root);
         root = bt.addNode(30, root);
         morrisTraversal mt = new morrisTraversal();
-        mt.inOrder(root);
+        mt.inOrderToPrint(root);
         System.out.println();
         mt.preOrder(root);
     }
