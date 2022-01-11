@@ -1,21 +1,24 @@
 package sorts;
 
 public class bubbleSort {
-    public bubbleSort(int[] arr){
-        sort(arr);
+    public bubbleSort(int[] nums){
+        sort(nums);
     }
-    void sort(int[] arr){
-        for(int i = 0; i < arr.length; i++){
-            for(int j = i + 1; j < arr.length; j++){
-                if(arr[i] > arr[j]){
-                    swap(arr, i , j);
-                }
-            }
-        }
+    //i  j
+    //29,10,5,37,14
+    public void sort(int[] nums){
+      for(int i = nums.length - 1; i >= 0; i--){
+          for(int j = 0; j < i; j++){
+              if(nums[j] >= nums[i]){
+                  swap(nums, i, j);
+              }
+          }
+      }
     }
-    void swap(int[] arr, int i, int j){
-        int temp = arr[i];
-        arr[i] = arr[j];
-        arr[j] = temp;
+
+    public void swap(int[] nums, int i, int j){
+        int temp = nums[i];
+        nums[i] = nums[j];
+        nums[j] = temp;
     }
 }

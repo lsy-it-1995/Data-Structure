@@ -3,33 +3,39 @@ package queue;
 import java.util.Iterator;
 import java.util.LinkedList;
 
-public class linkedQueue<T> implements Iterable<T>, queue<T>{
+public class linkedQueue<T> implements Iterable<T>, queue<T> {
     private LinkedList<T> list;
-    public linkedQueue(){
+
+    public linkedQueue() {
         list = new LinkedList<>();
     }
+
     @Override
     public void offer(T item) {
         list.addLast(item);
     }
+
     @Override
     public T poll() {
-        if(isEmpty()){
+        if (isEmpty()) {
             throw new RuntimeException();
         }
         return list.pollFirst();
     }
+
     @Override
     public int size() {
         return list.size();
     }
+
     @Override
     public T peek() {
-        if(isEmpty()){
+        if (isEmpty()) {
             throw new RuntimeException();
         }
         return list.peekFirst();
     }
+
     @Override
     public boolean isEmpty() {
         return list.isEmpty();
