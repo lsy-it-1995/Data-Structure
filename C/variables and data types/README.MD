@@ -1,12 +1,12 @@
 # C Data Types in C99
 
 ## Basic Data Types Definition
-| Type |	Description |
-|--|--|
-| Int |	Stores zero, positive, and negative values without decimal. The value can be signed or unsigned. The value assigned to int is considered positive by default if it is unsigned. |
-| Float |	Stores decimal values with single-precision |
-| Double |	It stores decimal values with double-precision |
-| Char |	stores a single character |
+|Format Specifier | Type |	Description |
+|--|--|--|
+|%d | Int |	Stores zero, positive, and negative values without decimal. The value can be signed or unsigned. The value assigned to int is considered positive by default if it is unsigned. |
+|%f | Float |	Stores decimal values with single-precision |
+|%lf | Double |	It stores decimal values with double-precision |
+|%c | Char |	stores a single character |
 
 ## Basic Data Types Range and Memory
 | Data Type	| Range	| Memory / Storage Size |
