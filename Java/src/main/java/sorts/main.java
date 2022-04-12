@@ -7,7 +7,7 @@ public class main {
         int[] arr = {29,10,5,37,14};
         System.out.println("Original: " + Arrays.toString(arr));
 
-        insertionSort is = new insertionSort(arr);
+        mergeSort ms = new mergeSort(arr, 0, arr.length - 1);
 
         System.out.println("After sorted: " + Arrays.toString(arr));
     }
@@ -16,7 +16,7 @@ public class main {
 //        bubbleSort bs = new bubbleSort(arr);
 //        countingSort cs = new countingSort(arr);
 
-//        mergeSort ms = new mergeSort(arr, 0, arr.length - 1);
+//        insertionSort is = new insertionSort(arr);
 
 //        heapSort hs = new heapSort(arr);
 

@@ -6,39 +6,34 @@ public class mergeSort {
     }
     void sort(int[] arr, int start, int end){
         if(start < end){
-            int mid =  start + (end - start)/2;
+            int mid = start + (end - start)/2;
             sort(arr, start, mid);
             sort(arr, mid + 1, end);
             merge(arr, start, mid, end);
         }
     }
     void merge(int[] arr, int start, int mid, int end){
-        int leftN = mid - start + 1,
-                rightN = end - mid;
-        int[] left = new int[leftN],
-                right = new int[rightN];
-
-        for(int i = 0; i < leftN; i++){
-            left[i] = arr[i+start];
-        }
-        for(int i = 0; i < rightN; i++){
-            right[i] = arr[mid + i + 1];
-        }
-
-        int i = 0, j = 0, k = start;
-        while(i < leftN && j < rightN){
-            if(left[i] <= right[j]){
-                arr[start] = left[i++];
+        int[] temp = new int[end - start + 1];
+        int i = start, j = mid + 1, k = 0;
+        while(i <= mid && j <= end){
+            if(arr[i] <= arr[j]){
+                temp[k] = arr[i];
+                i++; k++;
             }else{
-                arr[start] = right[j++];
+                temp[k] = arr[j];
+                j++; k++;
             }
-            start++;
         }
-        while(i<leftN){
-            arr[start++] = left[i++];
+        while(i <= mid){
+            temp[k] = arr[i];
+            i++; k++;
         }
-        while(j<rightN){
-            arr[start++] = right[j++];
+        while(j <= end){
+            temp[k] = arr[j];
+            j++; k++;
+        }
+        for(i = start; i <= end; i++){
+            arr[i] = temp[i-start];
         }
     }
 }
