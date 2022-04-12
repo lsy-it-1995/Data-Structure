@@ -1,21 +1,18 @@
 # C Data Types in C99
 
-## Integer Data Types
-| C type | stdint.h type | Bits | Sign | Range |
-|---|---|---|---|---|
-| char | uint8_t | 8 | Unsigned | 0 .. 255 |
-| signed | char	int8_t | 8 | Signed | -128 .. 127 |
-| unsigned | short	uint16_t | 16 | Unsigned | 0 .. 65,535 |
-| short | int16_t | 16 | Signed | -32,768 .. 32,767 |
-| unsigned int | uint32_t | 32 | Unsigned | 0 .. 4,294,967,295 |
-| int | int32_t | 32 | Signed | -2,147,483,648 .. 2,147,483,647 |
-| unsigned long long | uint64_t | 64 | Unsigned | 0 .. 18,446,744,073,709,551,615 |
-| long long | int64_t | 64 | Signed | -9,223,372,036,854,775,808 .. 9,223,372,036,854,775,807 |
+## Data Types
+| Data Type	| Range	| Memory / Storage Size |
+|--|--|--|
+| short int(signed short int)	| -32,768 to 32,767	| 2 bytes |
+| unsigned short int	| 0 to 65,535	| 2 bytes |
+| long(singed short int)	| -2,147,483,648 to 2,147,483,647	| 4 bytes |
+| unsigned long	| 0 to 4,294,967,295	| 4 bytes |
+| int (signed int)	| -32,768 to 32,767 or -2,147,483,648 to 2,147,483,647	| 2 or 4 bytes |
+| unsigned int	| 0 to 65,535 or 0 to 4,294,967,295 | 2 or 4 bytes |
+| float	| 1.2E-38 to 3.4E+38 (6 decimal places) | 4 bytes |
+| double	| 2.3E-308 to 1.7E+308 (15 decimal places) | 8 bytes |
+| long double	| 3.4E-4932 to 1.1E+4932 (19 decimal places)	| 16 bytes |
+| signed char	| -128 to 127	| 1 byte |
+| unsigned char	| 0 to 255 | 1 byte |
 
-## Floating Point Data Types
-| C type |	IEE754 Name | Bits | Range|
-|--|--|--|--|
-| float |	Single Precision | 32 | -3.4E38 .. 3.4E38|
-| double |	Double Precision | 64 | -1.7E308 .. 1.7E308|
-
-[Credit](https://os.mbed.com/handbook/C-Data-Types#integer-data-types)
+[Source Credit](https://os.mbed.com/handbook/C-Data-Types#integer-data-types)
