@@ -1,6 +1,14 @@
 # C Data Types in C99
 
-## Data Types
+## Basic Data Types Definition
+| Type |	Description |
+|--|--|
+| Int |	Stores zero, positive, and negative values without decimal. The value can be signed or unsigned. The value assigned to int is considered positive by default if it is unsigned. |
+| Float |	Stores decimal values with single-precision |
+| Double |	It stores decimal values with double-precision |
+| Char |	stores a single character |
+
+## Basic Data Types Range and Memory
 | Data Type	| Range	| Memory / Storage Size |
 |--|--|--|
 | short int(signed short int)	| -32,768 to 32,767	| 2 bytes |
@@ -15,4 +23,4 @@
 | signed char	| -128 to 127	| 1 byte |
 | unsigned char	| 0 to 255 | 1 byte |
 
-[Source Credit](https://os.mbed.com/handbook/C-Data-Types#integer-data-types)
+[Source Credit](https://www.naukri.com/learning/articles/data-types-in-c-programming-with-examples/)
